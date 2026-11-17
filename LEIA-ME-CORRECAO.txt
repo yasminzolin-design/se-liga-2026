@@ -1,0 +1,9 @@
+SE LIGA 2026 — EDIÇÃO POR AUTOR
+1. Firebase Console > Firestore > Regras: substitua TODAS as regras pelo conteúdo de firestore.rules e publique.
+2. Configure firebase-config.js com os dados do seu aplicativo (se já preencheu no VS Code, preserve a configuração).
+3. Hospede a pasta em HTTPS, como Netlify. Não abra diretamente via file://.
+4. Entre com um professor e crie um registro; entre com outro professor em outro navegador para testar.
+5. Todos os usuários autenticados podem ler as quatro coleções; somente o autor pode editar/excluir.
+6. A importação inicial pertence à conta que importar; evite duplicar.
+7. A equipe pedagógica não tem privilégios administrativos especiais nesta versão.
+8. Não registre informações sensíveis dos estudantes.

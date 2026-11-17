@@ -1,0 +1,18 @@
+SE LIGA 2026 - VERSÃO COLABORATIVA
+
+1. Acesse https://console.firebase.google.com/ e crie um projeto.
+2. Em Authentication > Sign-in method, habilite Email/Senha.
+3. Em Authentication > Users, cadastre cada professor com e-mail e senha individual.
+4. Em Firestore Database, crie um banco de dados (modo produção).
+5. Em Firestore Database > Regras, substitua as regras pelo conteúdo de firestore.rules e publique.
+6. Em Configurações do projeto > Seus apps > Web, registre um aplicativo web e copie o objeto firebaseConfig para firebase-config.js.
+7. Abra a pasta no VS Code e execute com Live Server. NÃO abra index.html diretamente como file://, pois usa módulos ES.
+8. Faça login, abra Dados e backup e clique em Carregar planejamento inicial (apenas uma vez).
+9. Publique os arquivos do site no Netlify ou GitHub Pages. Todos devem acessar o mesmo endereço.
+10. Teste com dois navegadores: altere um registro em um e verifique a atualização automática no outro.
+
+IMPORTANTE: As regras fornecidas autorizam qualquer usuário autenticado a editar ou excluir QUALQUER registro. São apropriadas apenas para um grupo de professores de confiança, sem informações sensíveis. Para permitir que cada professor edite somente seus próprios planos, é preciso implementar regras e papéis adicionais.
+
+O Firebase exige configuração e pode ter limites de uso e custos conforme o plano. Não coloque dados pessoais sensíveis dos estudantes neste sistema sem avaliação da escola e das exigências da LGPD.
+
+O projeto original usa os arquivos seed.js e style.css, mantidos nesta versão. Os registros antigos que estavam apenas no localStorage NÃO são transferidos automaticamente: exporte-os na versão anterior e faça migração específica se necessário.

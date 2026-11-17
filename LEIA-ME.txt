@@ -1,0 +1,21 @@
+PROJETO SE LIGA 2026 — SITE EDITÁVEL
+
+1. Extraia o arquivo ZIP.
+2. Abra a pasta se-liga-2026 no Visual Studio Code.
+3. Abra index.html no navegador ou utilize a extensão Live Server.
+4. Use as abas para criar, editar e excluir ações, oficinas, cronograma e planejamentos.
+5. Em Dados e backup, exporte periodicamente um arquivo JSON para guardar seu trabalho.
+
+PUBLICAÇÃO
+- Netlify: envie a pasta inteira (ou o ZIP) para um novo site estático.
+- GitHub Pages: publique os arquivos index.html, style.css, seed.js e script.js.
+- Não é necessário instalar bibliotecas ou executar comandos de compilação.
+
+ATENÇÃO SOBRE EDIÇÃO ONLINE
+Este modelo funciona com armazenamento local (localStorage). As edições realizadas em um navegador não são compartilhadas automaticamente com outros dispositivos nem salvas no servidor. Para que professores editem um único plano compartilhado, é necessário implementar autenticação e um banco de dados (por exemplo, Firebase ou Supabase), com controle de permissões. Não publique informações pessoais de estudantes no site público.
+
+ARQUIVOS
+index.html — estrutura do site
+style.css — aparência e responsividade
+seed.js — dados iniciais da planilha original
+script.js — navegação, formulários, edições, exportação e importação

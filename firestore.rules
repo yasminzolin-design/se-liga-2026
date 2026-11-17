@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function logado() { return request.auth != null; }
+    function dono() { return logado() && resource.data.professorUid == request.auth.uid; }
+    function dadosValidos() {
+      return request.resource.data.professorUid is string
+        && request.resource.data.professorUid == request.auth.uid;
+    }
+    match /{colecao}/{registroId} {
+      allow read: if logado() && colecao in ['acoes','oficinas','cronograma','planejamentos'];
+      allow create: if logado() && colecao in ['acoes','oficinas','cronograma','planejamentos'] && dadosValidos();
+      allow update: if dono() && dadosValidos() && colecao in ['acoes','oficinas','cronograma','planejamentos'];
+      allow delete: if dono() && colecao in ['acoes','oficinas','cronograma','planejamentos'];
+    }
+    match /{document=**} { allow read, write: if false; }
+  }
+}
